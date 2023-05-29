@@ -1,24 +1,24 @@
 <template>
     <div class="iconList">
-        <div class="iconitem">
+        <div class="iconItem">
             <svg class="icon" aria-hidden="true">
                 <use xlink:href="#icon-fanjutuijian"></use>
             </svg>
             <span>每日推荐</span>
         </div>
-        <div class="iconitem">
+        <div class="iconItem">
             <svg class="icon" aria-hidden="true">
                 <use xlink:href="#icon-airec"></use>
             </svg>
             <span>私人FM</span>
         </div>
-        <div class="iconitem">
+        <div class="iconItem">
             <svg class="icon" aria-hidden="true">
                 <use xlink:href="#icon-gedan"></use>
             </svg>
             <span>歌单</span>
         </div>
-        <div class="iconitem">
+        <div class="iconItem">
             <svg class="icon" aria-hidden="true">
                 <use xlink:href="#icon-paihangbang"></use>
             </svg>
@@ -29,9 +29,10 @@
 
 <script>
 export default {
-    name: 'iconlist',
+    name: 'iconist'
 }
 </script>
+
 <style lang="less" scoped>
 .iconList {
     width: 7.5rem;
@@ -53,4 +54,5 @@ export default {
             font-size: 0.26rem;
         }
     }
-}</style>
+}
+</style>
