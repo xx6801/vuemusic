@@ -17,5 +17,15 @@ export function getMusicList(id){
     return axios.get(`${baseUrl}/playlist/detail?id=${id}`);
 }
 
+//封装获取歌词的api  调用例子： http://localhost:3000/lyric?id=404459664 音乐id
+export function getLyric(id){
+    return axios.get(`${baseUrl}/lyric?id=${id}`);
+}
+
+//封装搜索歌曲的api  /search?keywords=海阔天空
+export function searchMusic(keywords){
+    return axios.get(`${baseUrl}/search?keywords=${keywords}`);
+}
+
 //对外抛出
-export default { getBanner,getMusic,getMusicList };
+export default { getBanner,getMusic,getMusicList,getLyric,searchMusic };

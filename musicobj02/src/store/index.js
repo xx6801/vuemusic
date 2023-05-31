@@ -10,12 +10,14 @@ export default createStore({
           id: 16960,
           name: "断桥残雪",
           pic: 19061133579343590,
-          picUrl: "https://p2.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg",
+          picUrl: "https://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg",
           pic_str: "19061133579343591",
         }
       } 
     ],
-    playCurrentIndex:0  //当前播放音乐在列表中的下标
+    playCurrentIndex:0,  //当前播放音乐在列表中的下标
+    lyric:"abc",   //保存当前播放音乐的歌词
+    isLogin:true  //用户的登录状态
   },
   getters: {
   },
@@ -23,8 +25,14 @@ export default createStore({
     setPlayList(state,value){ //定义一个函数用来修改state中播放列表的数据
       state.playlist = value;
     },
+    pushPlayList(state,value){ //定义一个函数用在playlist末尾追加一条数据
+      state.playlist.push(value);
+    },
     setPlayIndex(state,value){ //定义一个函数用来修改当前正在播放歌曲的下标
       state.playCurrentIndex = value;
+    },
+    setLyric(state,value){
+      state.lyric = value;  //定义一个函数用来修改当前正在播放歌曲的歌词
     }
   },
   actions: {
